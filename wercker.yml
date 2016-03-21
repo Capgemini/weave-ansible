@@ -3,7 +3,7 @@ no-response-timeout: 15
 build:
   steps:
     - pip-install:
-        requirements_file: "requirements.txt"
+        requirements_file: "requirements-test.txt"
     - script:
         name: syntax-check ansible playbook
         code: |
