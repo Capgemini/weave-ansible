@@ -9,5 +9,6 @@ weave_url: "https://github.com/weaveworks/weave/releases/download/v{{ weave_vers
 weave_bin: /mnt/weave
 
 # scope
+scope_enabled: False
 scope_url: https://github.com/weaveworks/scope/releases/download/latest_release/scope
 scope_bin: /mnt/scope
