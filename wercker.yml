@@ -5,9 +5,9 @@ build:
     - pip-install:
         requirements_file: "requirements-test.txt"
     - script:
-        name: syntax-check ansible playbook
-        code: |
-          echo localhost > wercker_inventory
-          ansible-galaxy install --force -r requirements.yml
-          ansible-playbook -i wercker_inventory --syntax-check site.yml
-
+        cwd: ./
+        name: Check the role syntax.
+        code: ansible-playbook -i tests/inventory tests/test.yml --syntax-check
+    - capgemini/ansible-lint:
+        name: run ansible-lint against the test.yml playbook
+        playbook: tests/test.yml
