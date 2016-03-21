@@ -3,7 +3,7 @@ weave
 
 <a href="https://app.wercker.com/project/bykey/b9c63f356842c8ae56b530ea8fd08f8a"><img alt="Wercker status" src="https://app.wercker.com/status/b9c63f356842c8ae56b530ea8fd08f8a/m"></a>
 
-Set up a weave network handle by systemd services.
+Set up a [weave](https://github.com/weaveworks/weave) network handle by systemd services.
 
 Requirements
 ------------
