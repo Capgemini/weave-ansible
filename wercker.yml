@@ -1,0 +1,13 @@
+box: python:2.7
+no-response-timeout: 15
+build:
+  steps:
+    - pip-install:
+        requirements_file: "requirements.txt"
+    - script:
+        name: syntax-check ansible playbook
+        code: |
+          echo localhost > wercker_inventory
+          ansible-galaxy install --force -r requirements.yml
+          ansible-playbook -i wercker_inventory --syntax-check site.yml
+
