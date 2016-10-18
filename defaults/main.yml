@@ -12,3 +12,4 @@ weave_bin: /mnt/weave
 scope_enabled: False
 scope_url: https://github.com/weaveworks/scope/releases/download/latest_release/scope
 scope_bin: /mnt/scope
+scope_launch_peers: "{{ weave_launch_peers }}"
