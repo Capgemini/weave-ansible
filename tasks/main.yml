@@ -26,11 +26,14 @@
     - src: weave.env.j2
       dest: /etc/weave.env
   notify:
-    - reload systemd
     - restart weave
     - restart weaveproxy
   tags:
     - weave
+
+- name: reload systemd
+  become: yes
+  command: systemctl daemon-reload
 
 - name: ensure weave service is running.
   become: yes
